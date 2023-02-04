@@ -4,13 +4,13 @@ import CotizadorContext from "../context/CotizadorProvider"
 
 const Formulario = () => {
 
-    const {modal, setModal } = useContext(CotizadorContext)
+    const {modal, cambiarState } = useContext(CotizadorContext)
     console.log(modal)
 
   return (
     <>
         <button
-            onClick={() => setModal(true)}
+            onClick={cambiarState}
         >
             Cambiar Modal de Context
         </button>
