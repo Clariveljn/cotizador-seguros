@@ -4,7 +4,7 @@ import useCotizador from "../hooks/useCotizador"
 
 const Formulario = () => {
 
-    const {handleChangeDatos} = useCotizador()
+    const {datos, handleChangeDatos} = useCotizador()
 
   return (
     <>
@@ -17,6 +17,7 @@ const Formulario = () => {
                     name="marca" 
                     className="w-full p-3 bg-white border border-gray-200"
                     onChange={ e => handleChangeDatos(e)}
+                    value={datos.marca}
                     >
                         <option value="">-- Seleccione Marca --</option>
 
@@ -39,6 +40,7 @@ const Formulario = () => {
                     name="year" 
                     className="w-full p-3 bg-white border border-gray-200"
                     onChange={ e => handleChangeDatos(e)}
+                    value={datos.year}
                     >
                         <option value="">-- Seleccione Año --</option>
 

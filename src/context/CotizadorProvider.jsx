@@ -19,6 +19,7 @@ const CotizadorProvider = ({children}) => {
     return(
         <CotizadorContext.Provider
             value={{
+                datos,
                 handleChangeDatos
             }}
         >
