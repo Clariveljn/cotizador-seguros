@@ -1,20 +1,25 @@
 import { useState, createContext } from "react";
 
 const CotizadorContext = createContext()
+const CotizadorProvider = ({children}) => {
 
-const CotizadorProvider =({children}) => {
+    const [datos, setDatos] = useState({
+        marca:'',
+        year:'',
+        plan:''
+    })
 
-    const [modal, setModal] = useState(false)
-
-    const cambiarState = () => {
-        setModal(!modal)
+    const handleChangeDatos = e => {
+        setDatos({
+            ...datos,
+            [e.target.name] : e.target.value
+        })
     }
 
     return(
         <CotizadorContext.Provider
             value={{
-                modal,
-                cambiarState
+                handleChangeDatos
             }}
         >
             {children}
