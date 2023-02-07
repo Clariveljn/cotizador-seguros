@@ -36,7 +36,8 @@ const Formulario = () => {
                     onChange={ e => handleChangeDatos(e)}
                     value={datos.marca}
                     >
-                        <option value="">-- Seleccione Marca --</option>
+                        <option 
+                        value="">-- Seleccione Marca --</option>
 
                         {MARCAS.map(marca => (
                             <option
