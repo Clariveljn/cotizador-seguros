@@ -72,7 +72,7 @@ const Formulario = () => {
                     </select>
             </div>
 
-            <div className="my-5">
+            <div className="my-8">
                 <label className="block mb-3 font-bold text-gray-500 uppercase">
                     Elige un Plan
                 </label>
